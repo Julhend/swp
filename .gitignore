@@ -1,0 +1,9 @@
+# IDE files
+.idea/
+
+# node files
+node_modules/
+package-lock.json
+
+# configuration files
+.env
