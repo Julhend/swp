@@ -18,6 +18,22 @@ const defaultRoutes = [
     path: "/category",
     route: categoryRoute,
   },
+  {
+    path: "/product",
+    route: categoryRoute,
+  },
+  {
+    path: "/room",
+    route: categoryRoute,
+  },
+  {
+    path: "/variant",
+    route: categoryRoute,
+  },
+  {
+    path: "/manual",
+    route: categoryRoute,
+  },
 ];
 
 defaultRoutes.forEach((route) => {
