@@ -22,6 +22,10 @@ const Product = sequelize.define(
       type: DataTypes.STRING,
       allowNull: true,
     },
+    categoryId: {
+      type: DataTypes.UUIDV4,
+      allowNull: false,
+    },
   },
   {
     paranoid: true,

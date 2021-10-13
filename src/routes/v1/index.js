@@ -2,6 +2,7 @@ const express = require("express");
 const authRoute = require("./authRoute");
 const profileRoute = require("./profileRoute");
 const categoryRoute = require("./categoryRoute");
+const productRoute = require("./productRoute");
 
 const router = express.Router();
 
@@ -20,7 +21,7 @@ const defaultRoutes = [
   },
   {
     path: "/product",
-    route: categoryRoute,
+    route: productRoute,
   },
   {
     path: "/room",

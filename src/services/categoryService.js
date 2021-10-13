@@ -3,6 +3,7 @@ const { Category } = require("../models/category");
 const ApiError = require("../utils/ApiError");
 const Sequelize = require("sequelize");
 const Op = Sequelize.Op;
+const { Product } = require("../models/category");
 
 const createCategory = async (categoryBody) => {
   const category = await Category.findOne({
@@ -15,14 +16,6 @@ const createCategory = async (categoryBody) => {
 
   return Category.create(categoryBody);
 };
-
-const getCategoryByName = async (name, { opts = {} } = {}) =>
-  Category.findOne({
-    where: {
-      name,
-    },
-    ...opts,
-  });
 
 const getCategoryById = async (categoryId, { opts = {} } = {}) => {
   const category = await Category.findOne({
@@ -75,7 +68,6 @@ const deleteCategoryById = async (categoryId) => {
 
 module.exports = {
   createCategory,
-  getCategoryByName,
   getCategoryById,
   updateCategoryById,
   deleteCategoryById,

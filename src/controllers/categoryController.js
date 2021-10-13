@@ -48,13 +48,13 @@ const updateCategory = catchAsync(async (req, res) => {
 
 const deleteCategory = catchAsync(async (req, res) => {
   const categoryId = req.query.id;
-  const category = await deleteCategoryById(categoryId);
-  res.sendWrapped(category, httpStatus.OK);
+  await deleteCategoryById(categoryId);
+  res.sendWrapped("Category delete successfully", httpStatus.OK);
 });
 
 module.exports = {
   createNewCategory,
   getCategory,
   updateCategory,
-  deleteCategory
+  deleteCategory,
 };
